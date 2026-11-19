@@ -12,8 +12,13 @@ def to_grade(score):
     else:
         return "F"
 
+def is_pass(score):
+    return score >= 50
+
 
 def average(scores):
+    if not scores:
+        return 0
     return round(sum(scores) / len(scores), 2)
 
 
